@@ -1,0 +1,126 @@
+### CONEXION A MS-PAGOS DESDE ECOMMERCE (5000) POST PAGO | REGISTRAR PAGO
+POST http://localhost:5000/api/pagos/
+Content-Type: application/json
+
+{
+  "monto": 100.50,
+  "metodo": "tarjeta",
+  "descripcion": "pedido123"
+}
+
+### Prueba de ms-pagos (5003) POST PAGO | REGISTRAR PAGO
+POST http://localhost:5003/api/pagos/
+Content-Type: application/json
+
+{
+  "monto": 100.50,
+  "metodo": "tarjeta",
+  "descripcion": "pedido123"
+}
+
+### CONEXION A MS-PAGOS DESDE ECOMMERCE (5000) GET PAGOS | OBTENER PAGOS
+GET http://localhost:5000/api/pagos/
+Content-Type: application/json
+
+### Prueba de ms-pagos (5003) GET PAGOS | OBTENER PAGOS
+GET http://localhost:5003/api/pagos/
+Content-Type: application/json
+
+### Prueba de ms-catalogo DESDE ECOMMERCE (5000) POST PRODUCTO | REGISTRAR PRODUCTO
+POST http://localhost:5000/api/catalogo/
+Content-Type: application/json
+
+{
+  "nombre": "celu",
+  "precio": 100.50,
+  "activo": true
+}
+
+### Prueba de ms-catalogo (5001) POST PRODUCTO | REGISTRAR PRODUCTO
+POST http://localhost:5001/api/catalogo/
+Content-Type: application/json
+
+{
+  "nombre": "celular",
+  "precio": 100.50,
+  "activo": true
+}
+
+### Prueba de ms-catalogo desde ECOMMERCE (5000) GET PRODUCTO | OBTENER PRODUCTO
+GET http://localhost:5000/api/catalogo/1
+Content-Type: application/json
+
+### Prueba de ms-catalogo (5001) GET PRODUCTO | OBTENER PRODUCTO
+GET http://localhost:5001/api/catalogo/1
+Content-Type: application/json
+
+### Prueba de ms-compras desde ECOMMERCE (5000) POST COMPRA  | CREAR COMPRA
+POST http://localhost:5000/api/compras/
+Content-Type: application/json
+
+{
+  "producto_id": "1",
+  "cantidad": 1,
+  "direccion_envio": "Calle 123123"
+}
+
+### Prueba de ms-compras (5003) POST COMPRA | CREAR COMPRA
+POST http://localhost:5002/api/compras/
+Content-Type: application/json
+
+{
+  "producto_id": "2",
+  "cantidad": 1,
+  "direccion_envio": "Calle 123123"
+}
+
+### Prueba de ms-inventario desde ECOMMERCE (5000) POST REGISTRO | CREAR TRANSACCION
+POST http://localhost:5000/api/inventario/
+Content-Type: application/json
+
+{
+  "producto_id": 1,
+  "cantidad": 50,
+  "entrada_salida": 1
+}
+
+### Prueba de ms-inventario (5004) POST REGISTRO | CREAR TRANSACCION
+POST http://localhost:5004/api/inventario/
+Content-Type: application/json
+
+{
+  "producto_id": 2,
+  "cantidad": 30,
+  "entrada_salida": 1
+}
+
+### Prueba de ms-inventario desde ECOMMERCE (5000) GET PRODUCT | CONSULTA STOCK
+GET http://localhost:5000/api/inventario/1
+Content-Type: application/json
+
+### Prueba de ms-inventario (5004) GET PRODUCT | CONSULTA STOCK
+GET http://localhost:5004/api/inventario/3
+Content-Type: application/json
+
+
+### REGISTRAR COMPRA DESDE ECOMMERCE
+POST http://localhost:5000/api/compra/
+Content-Type: application/json
+
+{
+  "producto_id": 1,
+  "cantidad": 1,
+  "direccion_envio": "Calle 123",
+  "metodo": "tarjeta"
+}
+
+### REGISTRAR COMPRA DESDE ECOMMERCE
+POST http://localhost:5000/api/compra/
+Content-Type: application/json
+
+{
+  "producto_id": 1,
+  "cantidad": 1,
+  "direccion_envio": "Calle 123",
+  "metodo": "tarjeta"
+}
